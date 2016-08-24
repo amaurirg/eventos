@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+.titulo{
+	width: 100%;
+    padding:15px; 
+    font: 22pt "Comic Sans MS", cursive; 
+    margin-top: 10px;
+    text-align: center;
+    font-size: 270%;
+}
+
+.titulo h1 {
+  color: yellow;
+  font-family: "Comic Sans MS", cursive; 
+  font-size: 200%;
+}
+
+div#login{
+    width: 45vh;
+    padding:15px; 
+    font: 10pt "Comic Sans MS", cursive; 
+    margin-top: 10px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+
+.banner {
+  height: 100vh;
+  background-image: linear-gradient(135deg, rgba(0, 0, 255, 0.25), rgba(255, 0, 0, 0.25)), url("../images/logo.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+}
+
+
+
+/*.banner a {
+  font-size: 30px;
+  font-weight: lighter;
+}
+*/
+.btn-medium {
+  padding: 10px 15px;
+  background: #1C1DA5;
+  color: #fff;
+  border-radius: 30px;
+  border: 1px solid #999;
+  font-weight: lighter;
+  opacity: 0.6;
+}
+.btn-medium:hover {
+  color: #999;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.btn-treehouse {
+  background: #1AA401;
+  color: #FFF;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 10px 15px;
+}
+.btn-treehouse:hover {
+  background: #25C905;
+  color: #FFF;
+  text-decoration: none;
+}

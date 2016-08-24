@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Painel ADM</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+      <link href="css/estilo.css" rel="stylesheet">
+      <link href="css/painel.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+      
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand logo" href="#">Devmedia</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+           
+<!--
+          <ul class="nav navbar-nav navbar-right">
+            
+            <li class="dropdown">
+                
+            </li>
+            
+          </ul>
+-->
+                <span class="badge-container pull-right">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <img src="img/20151019_153658205_iOS.jpg" alt="Perfil do Usuário" class="avatar img-circle"></a>
+                    <a href="index.html"><span class="badge">15</span></a>
+                                
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Perfil</a></li>
+                      <li><a href="#">Gerenciamento</a></li>
+                      <li><a href="#">Sair</a></li>
+                    </ul>
+                </span>
+
+<!--
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <img src="img/userAnonymous.png" alt="Perfil do Usuário" class="avatar img-circle"></a>
+-->
+                
+                
+<!--
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <img src="img/20151019_153658205_iOS.jpg" alt="Perfil do Usuário" class="avatar img-circle"></a>
+-->            
+            
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+      
+      <div class="container">
+        <div class="row-fluid">
+            <div class="col-sm-3">
+                <!-- Início menu navegação lateral -->
+                <div class="panel panel-primary">
+                    <div id="colGroup1" role="tab" class="panel-heading">
+                        <h4 class="panel-title">
+                            <a href="#colListGroup1" aria-controls="colListGroup1" aria-expanded="false" data-toggle="collapse">
+                                <span class="glyphicon glyphicon-file"></span>
+                                Gerenciar Posts
+                            </a>
+                        </h4>
+                    </div>
+                    <div role="tabpanel" class="panel-collapse collapse" id="colListGroup1" aria-expanded="false">
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="#">Criar novo post</a></li>
+                            <li class="list-group-item"><a href="#">Alterar post</a></li>
+                            <li class="list-group-item"><a href="#">Excluir post</a></li>
+                        </ul>
+                        <div class="panel-footer">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="panel panel-default">
+                    <div id="colGroup2" role="tab" class="panel-heading">
+                        <h4 class="panel-title">
+                            <a href="#colListGroup2" aria-controls="colListGroup2" aria-expanded="false" data-toggle="collapse">
+                                <span class="glyphicon glyphicon-user"></span>
+                                Gerenciar Usuários
+                            </a>
+                        </h4>
+                    </div>
+                    <div role="tabpanel" class="panel-collapse collapse" id="colListGroup2" aria-expanded="false">
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="#">Criar novo usuário</a></li>
+                            <li class="list-group-item"><a href="#">Alterar usuário</a></li>
+                            <li class="list-group-item"><a href="#">Excluir usuário</a></li>
+                        </ul>
+                        <div class="panel-footer">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- /. menu navegação lateral -->
+            </div>
+            <div class="col-sm-9">
+                <div class="conteudo-painel">
+                    <div class="conteudo-painel-int">
+                        
+                        <ul class="nav nav-pills" role="tablist">
+                            <li class="active"><a href="#">E-mails <span class="badge">10</span></a></li>
+                            <li><a href="#">Avisos <span class="badge">4</span></a></li>
+                            <li><a href="#">Mensagens <span class="badge">13</span></a></li>
+                        </ul>
+                        
+                        <hr />
+                        
+                        <div class="well well-sm">
+                            <h2>Seja bem vindo usuário!</h2>
+                            <p>Utilize o menu ao lado para acessar as áreas do painel</p>                        
+                        </div>
+                        
+                        <div class="page-header">
+                            <h3>Avisos:</h3>
+                        </div>
+                        
+                        <div class="alert alert-success">
+                            <strong>Parabéns!</strong>Você foi recomendado!
+                        </div>
+                        
+                        <div class="alert alert-warning">
+                            <strong>Atenção: </strong>Você tem até o fim do mês para solicitar suas férias!
+                        </div>
+                        
+                        <div class="alert alert-info">
+                            <strong>Projeto: </strong>Seu peojeto está funcionando perfeitamente!
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                                <h3>Minhas tarefas</h3>
+                                <ul>
+                                    <li>Ligar para Fulano</li>
+                                    <li>Retornar e-mail para Siclano</li>
+                                    <li>Outra tarefa</li>
+                                </ul>
+                                <a href="#" class="btn btn-primary btn-block">Adicionar nova tarefa</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      
+      
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

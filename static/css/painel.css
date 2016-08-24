@@ -1,0 +1,32 @@
+body{
+    background: url("../img/foil.png");
+    padding-top: 6.25em;
+}
+
+/*
+img{
+    width: 3.13em;
+    height: 3.13em;
+}
+
+.logo{
+    padding: 1.56em;
+}
+
+.badge-container {
+  padding: 0.94em;
+  display: inline-block;
+  position: relative;
+}
+
+
+.badge-container .badge {
+  background-color: red;
+  color: white;
+  position: absolute;
+  top: 0.63em;
+  right: 0.31em;
+  padding: 0.25em;
+  border-radius: 1.56em;
+}
+*/

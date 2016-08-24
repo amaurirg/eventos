@@ -1,0 +1,249 @@
+*{
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+body{
+    padding-top: 4.38em;
+}
+
+section{
+    padding-top: 3em;
+    padding-bottom: 0.94em;
+    min-height: 100vh;
+}
+
+section#contato{
+    min-height: 80vh;
+}
+
+.section_interna{
+    padding-top: 0em;
+}
+
+footer{
+    background: #eef;
+    padding-top: 1.88em;
+    padding-bottom: 1.88em;
+}
+
+.navbar-brand{
+    font-weight: 700;
+    padding-top: 11.56em;
+}
+
+.divslider{
+    padding-top: 0.94em;
+    padding-bottom: 0.94em;
+    background: gray;
+}
+
+/*
+.tamanho-slider{
+    width: 650px;
+    height: 476px;
+}
+*/
+
+.foto-centro{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fundo-confirmados{
+    background: url('../img/restaurant_icons.png');
+}
+
+.fundo-levar{
+    background: url('../img/restaurant_icons.png')
+}
+
+.tam_icon{
+    font-size: 1.25em;
+}
+
+.div_colorida{
+    background: url('../img/brickwall.png');
+}
+
+/*
+.servicos-item *{
+    text-align: center;
+}
+
+.servicos-item h4{
+    margin-top: 1.88em;
+    font-size: 1.7em;
+}
+
+.servicos_btn_todos_servicos{
+    margin-top: 1.56em;
+}
+
+.portfolio-item{
+    background: white
+}
+*/
+
+.fonte-item{
+    color: white;
+}
+
+.fonte-item h4{
+    color: black;
+    text-align: center;
+    margin-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+
+/*.portfolio-item h4{
+    text-align: center;
+    margin-top: 1.25em;
+    padding-bottom: 1.25em;
+}
+
+.portfolio-row{
+    margin-bottom: 1.25em;
+}
+
+.portfolio-row:last-child{
+    margin-bottom: 1.25em;
+}*/
+
+.row-foto{
+    margin-left: auto;
+}
+
+.fundo-foto{
+    background: url("../img/foil.png");
+}
+
+.foto{
+    padding: 0.63em 1.25em;
+}
+
+
+
+
+/*.img-black_white {
+ *//*opacidade*//*
+*//* opacity:0.75;*//*
+ -moz-opacity: 0.75;
+ filter: alpha(opacity=75);
+ -webkit-filter: opacity(0.75);
+ *//*filtro P/B*//*
+ filter: gray; *//* IE6-9 *//*
+ -webkit-filter: grayscale(100%); *//* Chrome 19+ & Safari 6+ *//*
+ *//*qualidade*//*
+ image-rendering: auto;
+}
+.img-black_white:hover {
+*//* opacity:1;*//*
+ -moz-opacity: 1;
+ filter: alpha(opacity=100);
+ -webkit-filter: opacity(1);
+ filter: none; *//* Firefox 10+ *//*
+ -webkit-filter: grayscale(0%); *//* Chrome 19+ & Safari 6+ *//*
+ image-rendering: auto;
+}
+
+.img-black_white2 {
+ *//*opacidade*//*
+ opacity:0.75;
+ -moz-opacity: 0.75;
+ filter: alpha(opacity=75);
+ -webkit-filter: opacity(0.75);
+ *//*filtro P/B*//*
+ filter: gray; *//* IE6-9 *//*
+ -webkit-filter: grayscale(100%); *//* Chrome 19+ & Safari 6+ *//*
+ *//*qualidade*//*
+ image-rendering: auto;
+}
+.img-black_white2:hover {
+ opacity:1;
+ -moz-opacity: 1;
+ filter: alpha(opacity=100);
+ -webkit-filter: opacity(1);
+ filter: none; *//* Firefox 10+ *//*
+ -webkit-filter: grayscale(0%); *//* Chrome 19+ & Safari 6+ *//*
+ image-rendering: auto;
+}*/
+
+.contato textarea{
+    height: 16.3em;
+    margin-bottom: 1em;
+}
+
+.contato .aviso{
+    padding: 0.5em;
+}
+
+.envio{
+    padding: 0.9em;
+}
+
+.form-login{
+    max-width: 21.88em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.63em;
+    border-radius: 0.63em;
+    background: #eee;
+}
+
+.form-login input{
+    margin-bottom: 0.63em;
+}
+
+.conteudo-painel{
+    background: white;
+    border-radius: 0.5em;
+    border: 0.06em solid #eee;
+    box-shadow: 0.19em 0.19em 0.19em #888;
+}
+
+.conteudo-painel-int{
+    padding: 0.75em;
+}
+
+.logo{
+    padding-top: 1.56em;
+}
+
+span img{
+    padding: 0em;
+    width: 4em;
+    height: 4em;
+}
+
+.badge-container {
+  padding: 0.4em;
+  display: inline-block;
+  position: relative;
+}
+
+
+.badge-container .badge {
+  background-color: red;
+  color: white;
+  position: absolute;
+  top: 0.4em;
+  right: 0em;
+  padding: 0.25em;
+  border-radius: 1.56em;
+}
+
+.centro li{
+    padding-top: 0.4em;
+}
+
+
+.centro a{
+    padding-top: 1.3em;
+}
+
+/*
+.distancia{
+    margin: auto;
+}*/

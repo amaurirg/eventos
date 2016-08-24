@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Devmedia - Login</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+      <link href="css/estilo.css" rel="stylesheet">
+      <link href="css/painel.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+      
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid centro">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand centro" href="#">Devmedia</a>
+        </div>
+
+        
+      </div><!-- /.container-fluid -->
+    </nav>
+      
+      <div class="container">
+        <div class="row-fluid">
+            <div class="col-xs-12">
+                <div class="form-login">
+                    <h2>Efetue o login</h2>
+                    <form>
+                        <label class="sr-only" for="inputEmail">E-mail</label>
+                        <input type="email" id="inputEmail" name="inputEmail" class="form-control input-lg" placeholder="Seu e-mail" required />
+                        <label class="sr-only" for="inputPass">Senha</label>
+                        <input type="password" id="inputPass" name="inputPass" class="form-control input-lg" placeholder="Sua Senha" />
+                        
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="s" /> Lembre-me
+                            </label>
+                        </div>
+                        
+<!--
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">
+                            <span class="glyphicon glyphicon-ok"></span>    
+                            Acessar
+                        </button>
+-->
+                        
+                        <input type="submit" class="btn btn-primary btn-lg btn-block" value="Acessar" />
+                        
+                    </form>
+                </div>    
+            </div>
+            
+        </div>
+      </div>
+      
+      
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
