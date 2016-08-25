@@ -23,7 +23,7 @@
   <body data-spy="scroll" data-target=".menu-navegacao" data-offset="80">
 
       <!-- Menu da Aplicação -->
-      <nav class="navbar navbar-default navbar-fixed-top">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header centro">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-navegacao" aria-expanded="false">
@@ -33,20 +33,21 @@
                 </button>
                 <a class="navbar-brand" href="{{=URL('home')}}">Primos do Sítio</a>
 
-              <span class="badge-container pull-right">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
-                            <img src="{{=URL('static','img/20151019_153658205_iOS.jpg')}}" alt="Perfil do Usuário" class="avatar img-circle"></a>
-                            <a href="{{=URL('home')}}"><span class="badge">15</span></a>
+                <span class="badge-container pull-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                        <img src="{{=URL('static','img/20151019_153658205_iOS.jpg')}}" alt="Perfil do Usuário" class="avatar img-circle"></a>
+                        <a href="{{=URL('home')}}"><span class="badge">15</span></a>
 
-                            <ul class="dropdown-menu">
-                              <li><a href="#">Perfil</a></li>
-                              <li><a href="#">Gerenciamento</a></li>
-                              <li><a href="#">Sair</a></li>
-                            </ul>
-              </span>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Perfil</a></li>
+                          <li><a href="#">Gerenciamento</a></li>
+                          <li><a href="#">Sair</a></li>
+                        </ul>
+                </span>
+
             </div>
 
-            <div class="colapse navbar-collapse menu-navegacao" id="menu-navegacao">
+            <div class="collapse navbar-collapse menu-navegacao" id="menu-navegacao">
                 <ul class="nav navbar-nav navbar-right centro">
                      <li><a href="#"></a></li>
                     <li><a href="#confirmados">Confirmados</a></li>
@@ -57,7 +58,7 @@
                 </ul>
             </div>
         </div>
-          
+
       </nav>
 
       <!-- // Menu da Aplicação -->
@@ -67,7 +68,7 @@
       <div class="divslider">
           <div class="container">
               <div class="row">
-                  <div class="col-xs-12 col-md-offset-3 col-md-6 col-md-offset-3">
+                  <div class="col-xs-offset-1 col-xs-10 col-xs-offset-1 col-sm-offset-2 col-sm-8 col-sm-offset-2 col-md-offset-2 col-md-8 col-md-offset-2 col-lg-offset-3 col-lg-6 col-lg-offset-3">
                       <div id="sliderprincipal" class="carousel slide" data-ride="carousel" data-interval="3000">
 
                           <ol class="carousel-indicators">
@@ -273,57 +274,6 @@
                    </div>
               </div>
 
-
-              <div class="btn-group" data-toggle="buttons">
-                  <label class="btn btn-primary active">
-                    <input type="checkbox" autocomplete="off" checked> Checkbox 1 (pre-checked)
-                  </label>
-                  <label class="btn btn-primary">
-                    <input type="checkbox" autocomplete="off"> Checkbox 2
-                  </label>
-                  <label class="btn btn-primary">
-                    <input type="checkbox" autocomplete="off"> Checkbox 3
-                  </label>
-            </div>
-
-            <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="page-header">
-                        <h1>Checkbox</h1>
-                    </div>
-                        <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-primary btnjs active">
-                                <input type="checkbox" checked>Opção 1
-                            </label>
-                            <label class="btn btn-primary btnjs">
-                                <input type="checkbox">Opção 2
-                            </label>
-                            <label class="btn btn-primary btnjs">
-                                <input type="checkbox">Opção 3
-                            </label>
-                        </div>
-                </div>
-           </div>
-        </div>
-
-            <div class="container">
-            <div class="row">
-                <div class="col-xs-12 text-center">
-
-                    <div class="page-header">
-                        <h1>Single Toggle</h1>
-                    </div>
-
-                    <button type="button" class="btn btn-primary" data-toggle="button">Single Toggle 1</button>
-                    <button type="button" class="btn btn-danger" data-toggle="button">Single Toggle 2</button>
-                    <button type="button" class="btn btn-success btnjs" id="troca-estado" data-loading-text="Carregando...">Carregar algo</button>
-
-                </div>
-            </div>
-        </div>
-
-
           </div>
       </section>
 
@@ -355,7 +305,7 @@
               
               <div class="row">
                 <div class="col-xs-12">
-                    <div class="col-xs-offset-10 col-xs-10 col-xs-offset-10 col-sm-4 col-md-4 col-lg-4">
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                         <h3>Data Indeterminada</h3>
                         <h3>Local Indeterminado</h3>
                     </div>
