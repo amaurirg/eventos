@@ -9,10 +9,10 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-      <link rel="stylesheet" href="css/font-awesome.min.css">
-      <link href="css/estilo.css" rel="stylesheet">
-      <link href="css/painel.css" rel="stylesheet">
+    <link href="{{=URL('static', 'css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{=URL('static', 'css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{=URL('static', 'css/estilo.css')}}" rel="stylesheet">
+    <link href="{{=URL('static', 'css/painel.css')}}" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,14 +26,14 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
+        <div class="navbar-header centro">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand logo" href="#">Devmedia</a>
+          <a class="navbar-brand logo" href="#">Gerenciamento</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -50,7 +50,7 @@
 -->
                 <span class="badge-container pull-right">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    <img src="img/20151019_153658205_iOS.jpg" alt="Perfil do Usuário" class="avatar img-circle"></a>
+                    <img src="{{=URL('static', 'img/20151019_153658205_iOS.jpg')}}" alt="Perfil do Usuário" class="avatar img-circle"></a>
                     <a href="index.html"><span class="badge">15</span></a>
                                 
                     <ul class="dropdown-menu">
@@ -62,13 +62,13 @@
 
 <!--
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  <img src="img/userAnonymous.png" alt="Perfil do Usuário" class="avatar img-circle"></a>
+                  <img src="{{=URL('static', 'img/userAnonymous.png')}}" alt="Perfil do Usuário" class="avatar img-circle"></a>
 -->
                 
                 
 <!--
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  <img src="img/20151019_153658205_iOS.jpg" alt="Perfil do Usuário" class="avatar img-circle"></a>
+                  <img src="{{=URL('static', 'img/20151019_153658205_iOS.jpg')}}" alt="Perfil do Usuário" class="avatar img-circle"></a>
 -->            
             
         </div><!-- /.navbar-collapse -->
@@ -178,7 +178,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{{=URL('static', 'js/bootstrap.min.js')}}"></script>
+    <script src="{{=URL('static', 'js/main.js')}}"></script>
   </body>
 </html>

@@ -10,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="{{=URL('static', 'css/bootstrap.min.css')}}" rel="stylesheet">
-      <link href="{{=URL('static', 'css/estilo.css')}}" rel="stylesheet">
+    <link href="{{=URL('static', 'css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{=URL('static', 'css/estilo.css')}}" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,36 +21,23 @@
     <![endif]-->
     {{include 'web2py_ajax.html'}}
   </head>
-  <body data-spy="scroll" data-target=".menu-navegacao" data-offset="80">
+  <body> <!-- data-spy="scroll" data-target=".menu-navegacao" data-offset="80"> -->
 
       <!-- Menu da Aplicação -->
       <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header centro">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-navegacao" aria-expanded="false">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-navegacao" aria-expanded="false" aria-controls="navbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="{{=URL('home')}}">Primos do Sítio</a>
-
-                <span class="badge-container pull-right">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
-                        <img src="{{=URL('static','img/20151019_153658205_iOS.jpg')}}" alt="Perfil do Usuário" class="avatar img-circle"></a>
-                        <a href="{{=URL('home')}}"><span class="badge">15</span></a>
-
-                        <ul class="dropdown-menu">
-                          <li><a href="#">Perfil</a></li>
-                          <li><a href="#">Gerenciamento</a></li>
-                          <li><a href="#">Sair</a></li>
-                        </ul>
-                </span>
-
             </div>
 
-            <div class="collapse navbar-collapse menu-navegacao" id="menu-navegacao">
-                <ul class="nav navbar-nav navbar-right centro">
-                     <li><a href="#"></a></li>
+            <div class="collapse navbar-collapse" id="menu-navegacao">
+                <ul class="nav navbar-nav">
+                    <!--<li class="active"><a href="#">Home</a></li>-->
                     <li><a href="#confirmados">Confirmados</a></li>
                     <li><a href="#naoconfirmados">Não Confirmados</a></li>
                     <li><a href="#oquelevar">O Que Levar</a></li>
@@ -57,6 +45,19 @@
                     <li><a href="#duvidas">Dúvidas</a></li>
                 </ul>
             </div>
+
+            <span class="badge-container">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <img src="{{=URL('static','img/20151019_153658205_iOS.jpg')}}" alt="Perfil do Usuário" class="avatar img-circle"></a>
+                <a href="{{=URL('home')}}"><span class="badge">15</span></a>
+
+                <ul class="dropdown-menu">
+                  <li><a href="#">Perfil</a></li>
+                  <li><a href="{{=URL('painel')}}">Gerenciamento</a></li>
+                  <li><a href="#">Sair</a></li>
+                </ul>
+            </span>
+
         </div>
 
       </nav>
@@ -124,6 +125,7 @@
                 <div class="row foto-centro">
                   <div class="col-xs-6 col-md-3 col-lg-4 text-center">
                         <div class="foto-centro"><img src="{{=URL('static', 'img/userAnonymous.png')}}" class="img-responsive img-circle" /></div>
+                        <!--<h4 class="sr-only">Amauri</h4>-->
                         <h4>Amauri</h4>
                   </div>
 
@@ -186,7 +188,13 @@
                         </div>
                     </div>
                 </div>
-              
+
+                <div class="row contato">
+                    <div class="col-xs-12">
+                        <h3 class="bg-primary aviso-presenca text-center">Clique na sua foto para confirmar presença</h3>
+                    </div>
+                </div>
+
                 <div class="row foto-centro">
                   <div class="col-xs-6 col-md-3 col-lg-4 text-center">
                         <div class="foto-centro"><img src="{{=URL('static', 'imgPrimos/Amauri.jpg')}}" class="img-responsive img-circle" /></div>
@@ -297,7 +305,7 @@
               <div class="row">
                 <div class="col-xs-12">
                     <div class="page-header">
-                        <h1>Data e Local</h1>
+                        <h1>Data e Local <small class="glyphicon glyphicon-calendar tam_icon"></small></h1>
                     </div>
                     
                 </div>
@@ -313,10 +321,11 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.448428335559!2d-46.
                     66045758548029!3d-23.552332884687388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94
                     ce583336f5f7fd%3A0xfd167d460c5b21b2!2zUi4gZGEgQ29uc29sYcOnw6NvIC0gQ29uc29sYcOnw6NvLCBTw6NvI
-                    FBhdWxvIC0gU1A!5e0!3m2!1spt-BR!2sbr!4v1471707714547" width="100%" height="450" frameborder="0"
+                    FBhdWxvIC0gU1A!5e0!3m2!1spt-BR!2sbr!4v1471707714547" width="80%" height="400" frameborder="0"
                             style="border:0" allowfullscreen></iframe>
                     </div>
               </div>
+            </div>
           </div>
       </section>      
       
@@ -328,14 +337,14 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="page-header">
-                        <h1>Dúvidas</h1>
+                        <h1>Dúvidas <small class="glyphicon glyphicon-question-sign tam_icon"></small></h1>
                     </div>
                 </div>
             </div>
               
             <div class="row contato">
                 <div class="col-xs-12">
-                    <p class="bg-success aviso">Faça um comentário ou sugestão</p>
+                    <h4 class="bg-success aviso-presenca">Faça um comentário ou sugestão</h4>
                 </div>
             </div>
             
@@ -345,20 +354,20 @@
                         <div class="row contato">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control input" placeholder="Digite seu nome *" required />
+                                    <input type="text" class="form-control input-lg" placeholder="Digite seu nome *" required />
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control input" placeholder="Digite seu e-mail *" required />
+                                    <input type="email" class="form-control input-lg" placeholder="Digite seu e-mail *" required />
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" class="form-control input" placeholder="Digite seu telefone" />
+                                    <input type="tel" class="form-control input-lg" placeholder="Digite seu telefone" />
                                 </div>
                                 <div class="form-group">
-                                <button type="submit" class="btn btn-info form-control btn-block disabled">Enviar Formulário</button>
+                                <button type="submit" class="btn btn-info btn-lg btn-block disabled">Enviar Formulário</button>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <textarea class="form-control input" placeholder="Sua mensagem"></textarea>
+                                <textarea class="form-control" placeholder="Sua mensagem"></textarea>
                             </div>
 
                         </div>

@@ -60,6 +60,11 @@ footer{
     background: url('../img/brickwall.png');
 }
 
+.aviso-presenca{
+    padding: 0.6em;
+    margin-bottom: 2em;
+}
+
 .fonte-item{
     color: white;
 }
@@ -84,7 +89,7 @@ footer{
 }
 
 .contato textarea{
-    height: 16.3em;
+    height: 16.4em;
     margin-bottom: 1em;
 }
 
@@ -122,6 +127,7 @@ footer{
 
 .logo{
     padding-top: 1.56em;
+    padding-bottom: 2.4em;
 }
 
 span img{
