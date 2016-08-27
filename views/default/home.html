@@ -21,32 +21,20 @@
     <![endif]-->
     {{include 'web2py_ajax.html'}}
   </head>
-  <body> <!-- data-spy="scroll" data-target=".menu-navegacao" data-offset="80"> -->
+  <body data-spy="scroll" data-target=".menu-navegacao" data-offset="80">
 
       <!-- Menu da Aplicação -->
       <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+        <div class="container-fluid">
             <div class="navbar-header centro">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-navegacao" aria-expanded="false" aria-controls="navbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                <div class="navbar-header centro">
                 <a class="navbar-brand" href="{{=URL('home')}}">Primos do Sítio</a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="menu-navegacao">
-                <ul class="nav navbar-nav">
-                    <!--<li class="active"><a href="#">Home</a></li>-->
-                    <li><a href="#confirmados">Confirmados</a></li>
-                    <li><a href="#naoconfirmados">Não Confirmados</a></li>
-                    <li><a href="#oquelevar">O Que Levar</a></li>
-                    <li><a href="#dataelocal">Data e Local</a></li>
-                    <li><a href="#duvidas">Dúvidas</a></li>
-                </ul>
-            </div>
-
-            <span class="badge-container">
+                <span class="badge-container">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                 <img src="{{=URL('static','img/20151019_153658205_iOS.jpg')}}" alt="Perfil do Usuário" class="avatar img-circle"></a>
                 <a href="{{=URL('home')}}"><span class="badge">15</span></a>
@@ -56,7 +44,32 @@
                   <li><a href="{{=URL('painel')}}">Gerenciamento</a></li>
                   <li><a href="#">Sair</a></li>
                 </ul>
-            </span>
+                </span>
+                    </div>
+            </div>
+
+            <div class="collapse navbar-collapse centro menu-navegacao" id="menu-navegacao">
+                <ul class="nav navbar-nav navbar-right">
+                    <!--<li class="active"><a href="#home">Home</a></li>-->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Informações<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#oquelevar">O Que Levar</a></li>
+                            <li><a href="#dataelocal">Data e Local</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Participantes<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#confirmados">Confirmados</a></li>
+                            <li><a href="#naoconfirmados">Não Confirmados</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#comentarios">Comentários</a></li>
+                </ul>
+            </div>
+
+
 
         </div>
 
@@ -110,6 +123,19 @@
       </div>      
       <!-- // Slider da Aplicação -->
 
+      <!-- Informações -->
+      <section id="informacoes">
+          <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="page-header">
+                            <h1>Informações<br/><small>Sobre o evento</small></h1>
+                        </div>
+                    </div>
+                </div>
+          </div>
+      </section>
+      <!-- // Informações -->
 
       <!-- Confirmados -->
       <section id="confirmados" class="fundo-confirmados">
@@ -191,57 +217,57 @@
 
                 <div class="row contato">
                     <div class="col-xs-12">
-                        <h3 class="bg-primary aviso-presenca text-center">Clique na sua foto para confirmar presença</h3>
+                        <h4 class="bg-primary aviso-presenca text-center">Clique na sua foto para confirmar que irá ao evento</h4>
                     </div>
                 </div>
 
                 <div class="row foto-centro">
                   <div class="col-xs-6 col-md-3 col-lg-4 text-center">
-                        <div class="foto-centro"><img src="{{=URL('static', 'imgPrimos/Amauri.jpg')}}" class="img-responsive img-circle" /></div>
+                        <a href="#" class="foto-centro"><img src="{{=URL('static', 'imgPrimos/Amauri.jpg')}}" class="img-responsive img-circle" /></a>
                         <h4>Amauri</h4>
                   </div>
                   
                     <div class="col-xs-6 col-md-3 col-lg-4 text-center">
-                        <div class="foto-centro"><img src="{{=URL('static', 'imgPrimos/Ideli.jpg')}}" class="img-responsive img-circle" /></div>
+                        <a  href="#" class="foto-centro"><img src="{{=URL('static', 'imgPrimos/Ideli.jpg')}}" class="img-responsive img-circle" /></a>
                         <h4>Ideli</h4>
                     </div>
  
                     <div class="col-xs-6 col-md-3 col-lg-4 text-center">
-                        <div class="foto-centro"><img src="{{=URL('static', 'imgPrimos/Katia.jpg')}}" class="img-responsive img-circle" /></div>
+                        <a href="#" class="foto-centro"><img src="{{=URL('static', 'imgPrimos/Katia.jpg')}}" class="img-responsive img-circle" /></a>
                         <h4>Katia</h4>
                     </div>
                 </div>
 
                 <div class="row foto-centro">
                   <div class="col-xs-6 col-md-3 col-lg-4 text-center">
-                        <div class="foto-centro"><img src="{{=URL('static', 'imgPrimos/AnaPaula.jpg')}}" class="img-responsive img-circle" /></div>
+                        <a href="#" class="foto-centro"><img src="{{=URL('static', 'imgPrimos/AnaPaula.jpg')}}" class="img-responsive img-circle" /></a>
                         <h4>Ana Paula</h4>
                   </div>
 
                     <div class="col-xs-6 col-md-3 col-lg-4 text-center">
-                        <div class="foto-centro"><img src="{{=URL('static', 'imgPrimos/Marcelo.jpg')}}" class="img-responsive img-circle" /></div>
+                        <a href="#" class="foto-centro"><img src="{{=URL('static', 'imgPrimos/Marcelo.jpg')}}" class="img-responsive img-circle" /></a>
                         <h4>Marcelo</h4>
                     </div>
 
                     <div class="col-xs-6 col-md-3 col-lg-4 text-center">
-                        <div class="foto-centro"><img src="{{=URL('static', 'imgPrimos/Fabio.jpg')}}" class="img-responsive img-circle" /></div>
+                        <a href="#" class="foto-centro"><img src="{{=URL('static', 'imgPrimos/Fabio.jpg')}}" class="img-responsive img-circle" /></a>
                         <h4>Fabio</h4>
                     </div>
                 </div>
 
                 <div class="row foto-centro">
                   <div class="col-xs-6 col-md-3 col-lg-4 text-center">
-                        <div class="foto-centro"><img src="{{=URL('static', 'imgPrimos/AnaLuzia.jpg')}}" class="img-responsive img-circle" /></div>
+                        <a href="#" class="foto-centro"><img src="{{=URL('static', 'imgPrimos/AnaLuzia.jpg')}}" class="img-responsive img-circle" /></a>
                         <h4>Ana Luzia</h4>
                   </div>
 
                     <div class="col-xs-6 col-md-3 col-lg-4 text-center">
-                        <div class="foto-centro"><img src="{{=URL('static', 'imgPrimos/Rosana.jpg')}}" class="img-responsive img-circle" /></div>
+                        <a href="#" class="foto-centro"><img src="{{=URL('static', 'imgPrimos/Rosana.jpg')}}" class="img-responsive img-circle" /></a>
                         <h4>Rosana</h4>
                     </div>
 
                     <div class="col-xs-6 col-md-3 col-lg-4 text-center">
-                        <div class="foto-centro"><img src="{{=URL('static', 'imgPrimos/Marcio.jpg')}}" class="img-responsive img-circle" /></div>
+                        <a href="#" class="foto-centro"><img src="{{=URL('static', 'imgPrimos/Marcio.jpg')}}" class="img-responsive img-circle" /></a>
                         <h4>Marcio</h4>
                     </div>
                 </div>
@@ -332,19 +358,19 @@
       <!-- // Data e Local -->
       
       <!-- Dúvidas -->
-      <section id="duvidas">
+      <section id="comentarios">
           <div class="container">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="page-header">
-                        <h1>Dúvidas <small class="glyphicon glyphicon-question-sign tam_icon"></small></h1>
+                        <h1>Dúvidas, Comentários e Sugestões<small class="glyphicon glyphicon-question-sign tam_icon"></small></h1>
                     </div>
                 </div>
             </div>
               
             <div class="row contato">
                 <div class="col-xs-12">
-                    <h4 class="bg-success aviso-presenca">Faça um comentário ou sugestão</h4>
+                    <h4 class="bg-success aviso-presenca">Tire sua dúvida, faça um comentário ou sugestão</h4>
                 </div>
             </div>
             
