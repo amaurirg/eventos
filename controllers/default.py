@@ -17,11 +17,16 @@ def index():
     if you need a simple wiki simply replace the two lines below with:
     return auth.wiki()
     """
-    
+    #camera = db(CAM).select(orderby=CAM.fabricante, limitby=(start,end))
+
     return dict()
 
-
+@auth.requires_login()
 def home():
+    # dados = db(db.auth_user).select()
+    # for foto in dados:
+    #     print "\nFoto: ",foto.fotoPerfil
+    #     print foto.fotoPerfil==''
     return dict()
 
 def login():
@@ -33,6 +38,8 @@ def painel():
 def portfolio():
     return dict()
 
+def user2():
+    return dict(form=auth())
 
 def user():
     """

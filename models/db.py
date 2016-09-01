@@ -87,6 +87,10 @@ auth = Auth(db, host_names=myconf.get('host.names'))
 service = Service()
 plugins = PluginManager()
 
+auth.settings.extra_fields['auth_user'] = [
+    Field('fotoPerfil', 'upload', default='static/img/userAnonymous.png', label='Foto do Perfil')
+]
+
 # -------------------------------------------------------------------------
 # create all tables needed by auth if not custom tables
 # -------------------------------------------------------------------------

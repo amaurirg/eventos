@@ -24,7 +24,7 @@
   <body data-spy="scroll" data-target=".menu-navegacao" data-offset="80">
 
       <!-- Menu da Aplicação -->
-      <nav class="navbar navbar-inverse navbar-fixed-top">
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header centro">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-navegacao" aria-expanded="false" aria-controls="navbar">
@@ -33,27 +33,33 @@
                     <span class="icon-bar"></span>
                 </button>
                 <div class="navbar-header centro">
-                <a class="navbar-brand" href="{{=URL('home')}}">Primos do Sítio</a>
-                <span class="badge-container">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                <img src="{{=URL('static','img/AmauriPerfil.jpg')}}" alt="Perfil do Usuário" class="avatar img-circle"></a>
-                <a href="{{=URL('home')}}"><span class="badge">15</span></a>
+                    <a class="navbar-brand" href="#">Primos do Sítio</a>
+                    <span class="badge-container">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">
 
-                <ul class="dropdown-menu">
-                  <li><a href="#">Perfil</a></li>
-                  <li><a href="{{=URL('painel')}}">Gerenciamento</a></li>
-                  <li><a href="#">Sair</a></li>
-                </ul>
-                </span>
-                    </div>
+                        <!--<img src="{{=URL('static','img/userAnonymous.png')}}" alt="Perfil do Usuário" class="avatar img-circle"></a>&ndash;&gt;-->
+
+                        <img src="{{=URL('download', args='%(fotoPerfil)s' %(auth.user))}}" alt="Perfil do Usuário" class="avatar img-circle"></a>
+
+                    <a href="{{=URL('home')}}"><span class="badge">15</span></a>
+<!--args=db.auth_user.fotoPerfil-->
+                    <ul class="dropdown-menu">
+                        <li><a href="{{=URL('user/profile')}}">Perfil</a></li>
+                        <li><a href="{{=URL('painel')}}">Gerenciamento</a></li>
+                        <li><a href="{{=URL('user/logout')}}">Sair</a></li>
+                    </ul>
+                    </span>
+                </div>
             </div>
 
             <div class="collapse navbar-collapse centro menu-navegacao" id="menu-navegacao">
+                <h5 class="navbar-text">Olá {{='%(first_name)s' %(auth.user)}}</h5>
                 <ul class="nav navbar-nav navbar-right">
-                    <!--<li class="active"><a href="#home">Home</a></li>-->
+                    <li class="active"><a href="#top">Início</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Informações<span class="caret"></span></a>
                         <ul class="dropdown-menu">
+                            <li><a href="#informacoes">Sobre o evento</a></li>
                             <li><a href="#oquelevar">O Que Levar</a></li>
                             <li><a href="#dataelocal">Data e Local</a></li>
                         </ul>
@@ -68,63 +74,60 @@
                     <li><a href="#comentarios">Comentários</a></li>
                 </ul>
             </div>
-
-
-
         </div>
-
       </nav>
-
       <!-- // Menu da Aplicação -->
 
 
       <!-- Slider da Aplicação -->
-      <div class="divslider">
-          <div class="container">
-              <div class="row">
-                  <div class="col-xs-offset-1 col-xs-10 col-xs-offset-1 col-sm-offset-2 col-sm-8 col-sm-offset-2 col-md-offset-2 col-md-8 col-md-offset-2 col-lg-offset-3 col-lg-6 col-lg-offset-3">
-                      <div id="sliderprincipal" class="carousel slide" data-ride="carousel" data-interval="3000">
+      <!--<section id="inicio"> &lt;!&ndash; class="fundo-slider"> &ndash;&gt;-->
+          <div class="divslider fundo-slider">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-xs-offset-1 col-xs-10 col-xs-offset-1 col-sm-offset-2 col-sm-8 col-sm-offset-2 col-md-offset-2 col-md-8 col-md-offset-2 col-lg-offset-3 col-lg-6 col-lg-offset-3">
+                          <div id="sliderprincipal" class="carousel slide" data-ride="carousel" data-interval="3000">
 
-                          <ol class="carousel-indicators">
-                              <li data-target="#sliderprincipal" data-slide-to="0" class="active"></li>
-                              <li data-target="#sliderprincipal" data-slide-to="1"></li>
-                              <li data-target="#sliderprincipal" data-slide-to="2"></li>
-                              <li data-target="#sliderprincipal" data-slide-to="3"></li>
-                          </ol>
+                              <ol class="carousel-indicators">
+                                  <li data-target="#sliderprincipal" data-slide-to="0" class="active"></li>
+                                  <li data-target="#sliderprincipal" data-slide-to="1"></li>
+                                  <li data-target="#sliderprincipal" data-slide-to="2"></li>
+                                  <li data-target="#sliderprincipal" data-slide-to="3"></li>
+                              </ol>
 
-                        <div class="carousel-inner" role="listbox">
-                            <div class="item active">
-                                <img src="{{=URL('static','imgPrimos/01.jpg')}}" class="img-responsive" alt="Imagem Slider 1">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="{{=URL('static','imgPrimos/01.jpg')}}" class="img-responsive" alt="Imagem Slider 1">
+                                </div>
+                                <div class="item">
+                                    <img src="{{=URL('static','imgPrimos/02.jpg')}}" class="img-responsive" alt="Imagem Slider 2">
+                                </div>
+                                <div class="item">
+                                    <img src="{{=URL('static','imgPrimos/03.jpg')}}" class="img-responsive" alt="Imagem Slider 2">
+                                </div>
+                                <div class="item">
+                                    <img src="{{=URL('static','imgPrimos/04.jpg')}}" class="img-responsive" alt="Imagem Slider 2">
+                                </div>
                             </div>
-                            <div class="item">
-                                <img src="{{=URL('static','imgPrimos/02.jpg')}}" class="img-responsive" alt="Imagem Slider 2">
-                            </div>
-                            <div class="item">
-                                <img src="{{=URL('static','imgPrimos/03.jpg')}}" class="img-responsive" alt="Imagem Slider 2">
-                            </div>
-                            <div class="item">
-                                <img src="{{=URL('static','imgPrimos/04.jpg')}}" class="img-responsive" alt="Imagem Slider 2">
-                            </div>
+
+                              <a class="left carousel-control" href="#sliderprincipal" role="button" data-slide="prev">
+                                  <span class="glyphicon glyphicon-chevron-left"></span>
+                                  <span class="sr-only">Anterior</span>
+                              </a>
+                              <a class="right carousel-control" href="#sliderprincipal" role="button" data-slide="next">
+                                  <span class="glyphicon glyphicon-chevron-right"></span>
+                                  <span class="sr-only">Próximo</span>
+                              </a>
+
+                          </div>
                         </div>
-
-                          <a class="left carousel-control" href="#sliderprincipal" role="button" data-slide="prev">
-                              <span class="glyphicon glyphicon-chevron-left"></span>
-                              <span class="sr-only">Anterior</span>
-                          </a>
-                          <a class="right carousel-control" href="#sliderprincipal" role="button" data-slide="next">
-                              <span class="glyphicon glyphicon-chevron-right"></span>
-                              <span class="sr-only">Próximo</span>
-                          </a>
-
-                      </div>
                     </div>
-                </div>
+              </div>
           </div>
-      </div>      
+      <!--</section>-->
       <!-- // Slider da Aplicação -->
 
       <!-- Informações -->
-      <section id="informacoes">
+      <section id="informacoes" class="fundo-informacoes">
           <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
@@ -205,7 +208,7 @@
 
 
       <!-- Não Confirmados -->
-      <section id="naoconfirmados" class="div_colorida">
+      <section id="naoconfirmados" class="fundo-naoconfirmados">
           <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
@@ -363,7 +366,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="page-header">
-                        <h1>Dúvidas, Comentários e Sugestões<small class="glyphicon glyphicon-question-sign tam_icon"></small></h1>
+                        <h1>Dúvidas, Comentários e Sugestões <small class="glyphicon glyphicon-question-sign tam_icon"></small></h1>
                     </div>
                 </div>
             </div>

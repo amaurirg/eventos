@@ -1,22 +1,29 @@
 {{extend 'layout.html'}}
 
-
-    <div class="banner">
-    <!-- <div id="logo"> -->
-    
-        <div id="login">
+<!--<div class="container">
+    <div class="row centralizado">
+        <div class="col-xs-8 col-sm-6 col-md-4 col-lg-offset-4 col-lg-4">
             <h4>{{=response.flash or ''}}</h4>
-            {{=form.custom.begin}}
-            <input type="text" name="participante" class="form-control" placeholder="Participante" autofocus></input>
-            <br />
-            <input type="password" name="senha" class="form-control" placeholder="Senha"></input>
-            <br />
-            <input type="submit" class="btn-medium">            
-            <br />
-            {{=form.custom.end}}
+                {{=form}}
         </div>
-    <!-- </div> -->
+    &lt;!&ndash; </div> &ndash;&gt;
     </div>
+</div>-->
+<h2>
+{{=T('Sign Up') if request.args(0) == 'register' else T('Log In') if request.args(0) == 'login' else T(request.args(0).replace('_',' ').title())}}
+</h2>
+
+<div class="container">
+        <div class="row-fluid">
+            <div class="col-xs-12">
+                <div class="form-login">
+                    <h3>Efetue o login</h3>
+                    {{=form}}
+                </div>
+            </div>
+
+        </div>
+      </div>
 
     <script language="javascript"><!--
     jQuery("#web2py_user_form input:visible:enabled:first").focus();
