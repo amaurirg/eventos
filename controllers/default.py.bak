@@ -62,7 +62,7 @@ def user2():
     return dict(form=auth())
 
 def email():
-    # envio = ''
+
     try:
         import argparse
         flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
@@ -75,8 +75,7 @@ def email():
         'https://www.googleapis.com/auth/gmail.modify', 'https://www.googleapis.com/auth/gmail.compose',
         'https://www.googleapis.com/auth/gmail.settings.basic', 'https://www.googleapis.com/auth/gmail.settings.sharing')
     CLIENT_SECRET_FILE = 'applications/eventos/private/client_secret.json'
-    # redirect_uri='http://amaurirg.pythonanywhere.com/oauth2callback'
-    APPLICATION_NAME = 'Gmail API Web2Py'
+    APPLICATION_NAME = 'Gmail API Python Quickstart'
 
 
     def get_credentials():
@@ -100,8 +99,6 @@ def email():
         if not credentials or credentials.invalid:
             flow = client.flow_from_clientsecrets(CLIENT_SECRET_FILE, SCOPES)
             flow.user_agent = APPLICATION_NAME
-            # auth_uri = flow.step1_get_authorize_url()
-
             if flags:
                 credentials = tools.run_flow(flow, store, flags)
             else: # Needed only for compatibility with Python 2.6
@@ -125,8 +122,7 @@ def email():
 
         try:
             message = (service.users().messages().send(userId="me", body=message).execute())
-            message_id = ('Message Id: %s' %message['id'])
-            session.flash = message_id
+            print ('Message Id: %s' %message['id'])
             return message
         except errors.HttpError, error:
             print ('An error occurred: %s' % error)
@@ -157,7 +153,6 @@ def email():
         of the user's Gmail account.
         """
         credentials = get_credentials()
-        # credentials = flow.step2_exchange(auth_code)
         http = credentials.authorize(httplib2.Http())
         service = discovery.build('gmail', 'v1', http=http)
 
@@ -165,10 +160,9 @@ def email():
         # destinatario = "kehcms@hotmail.com"
         # destinatario = "ap_giovani@yahoo.com.br"
 
-        destinatarios = ["amaurirg@terra.com.br", "amauri.giovani@gmail.com"]
-        # destinatarios = 'a'
+        destinatarios = ["amaurirg@terra.com.br", "ap_giovani@yahoo.com.br", "amauri.giovani@gmail.com"]
 
-        assunto_email = "Pythonanywhere - enviado de um script em Python"
+        assunto_email = "E-mail enviado de um script em Python"
 
         texto_mensagem = """
         Enviado do pythonanywhere usando a API Gmail.

@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <link rel="stylesheet" href="">
-</head>
-<body>
-    <h1>Envio de emails</h1>    
-</body>
-</html>
+{{extend 'layout.html'}}
 
+<h1>Envio de Emails</h1>
+<h5>ENVIO: {{=session.flash}}</h5>
+
+{{if session.flash:}}
+    <h3>Email enviado com sucesso!</h3>
+{{else:}}
+    <h3>ERRO no envio do e-mail.</h3>
+{{pass}}
